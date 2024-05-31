@@ -42,6 +42,24 @@ If you want to turn off the Tab 504 Checker extension, follow these steps:
 
    If you no longer need the extension, you can remove it by clicking the "Remove" button next to the extension's name.
 
+## Changing the Check Interval
+
+To change the interval at which the extension checks for "504" errors:
+
+1. Open the `background.js` file in a text editor.
+2. Locate the line with the `setInterval` function:
+
+   setInterval(checkTabs, 10000);
+
+3. Change `10000` (10,000 milliseconds) to your desired interval in milliseconds. For example, to check every 5 seconds, change it to:
+
+   setInterval(checkTabs, 5000);
+
+4. Save the changes and reload the extension in Chrome:
+
+   - Go to `chrome://extensions/`.
+   - Find the Tab 504 Checker extension and click the "Reload" button (circular arrow icon).
+
 ## Files
 
 - **manifest.json:** The manifest file that defines the extension's permissions and background script.
