@@ -19,7 +19,10 @@ function checkAndReload() {
   fetch(window.location.href)
     .then((response) => response.text())
     .then((text) => {
-      if (text.includes("504")) {
+      if (
+        text.includes("504") &&
+        (text.includes("Gateway Timeout") || text.includes("Gateway Time-out"))
+      ) {
         window.location.reload();
       }
     })
