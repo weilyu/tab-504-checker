@@ -14,19 +14,17 @@ async function checkTabs() {
   });
 }
 
-// Function to be injected into each tab to check for "504" and reload
+// Function to be injected into each tab to check for "504" in the current content and reload
 function checkAndReload() {
-  fetch(window.location.href)
-    .then((response) => response.text())
-    .then((text) => {
-      if (
-        text.includes("504") &&
-        (text.includes("Gateway Timeout") || text.includes("Gateway Time-out"))
-      ) {
-        window.location.reload();
-      }
-    })
-    .catch((error) => console.error("Error fetching page:", error));
+  const bodyText = document.body.innerText;
+
+  if (
+    bodyText.includes("504") &&
+    (bodyText.includes("Gateway Timeout") ||
+      bodyText.includes("Gateway Time-out"))
+  ) {
+    window.location.reload();
+  }
 }
 
 // Set an interval to run the check every 10 seconds
