@@ -72,7 +72,3 @@ If you have any suggestions or improvements, feel free to open an issue or submi
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-By following the steps above, you'll have the Tab 504 Checker extension up and running, ensuring your browsing experience is uninterrupted by "504" errors.
