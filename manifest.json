@@ -2,6 +2,8 @@
     "manifest_version": 3,
     "name": "Tab 504 Checker",
     "version": "1.0",
+    "author": "Wei Lyu",
+    "homepage_url": "https://github.com/weilyu",
     "permissions": [
       "tabs",
       "scripting",
