@@ -26,6 +26,22 @@ Tab 504 Checker is a Chrome extension that automatically monitors all open tabs 
 
 Once the extension is installed, it will automatically start monitoring your open tabs. You don't need to take any further action. The extension will check each tab every 10 seconds, and if a tab contains a "504" error in its content, it will automatically reload the tab.
 
+## Turning Off the Extension
+
+If you want to turn off the Tab 504 Checker extension, follow these steps:
+
+1. **Open Chrome Extensions Page**
+
+   Open Google Chrome and navigate to `chrome://extensions/`.
+
+2. **Disable the Extension**
+
+   Find the Tab 504 Checker extension in the list and toggle the switch to disable it.
+
+3. **Remove the Extension (Optional)**
+
+   If you no longer need the extension, you can remove it by clicking the "Remove" button next to the extension's name.
+
 ## Files
 
 - **manifest.json:** The manifest file that defines the extension's permissions and background script.
