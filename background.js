@@ -31,4 +31,8 @@ function checkAndReload() {
 chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 0.5 });
 
 // Add an event listener for the alarm
-chrome.alarms.onAlarm.addListener(checkTabs);
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === "checkTabsAlarm") {
+    checkTabs();
+  }
+});
