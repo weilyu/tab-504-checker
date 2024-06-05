@@ -27,5 +27,8 @@ function checkAndReload() {
   }
 }
 
-// Set an interval to run the check every 10 seconds
-setInterval(checkTabs, 10000);
+// Set an alarm to run the check every 30 seconds
+chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 0.5 });
+
+// Add an event listener for the alarm
+chrome.alarms.onAlarm.addListener(checkTabs);

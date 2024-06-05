@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Tab 504 Checker is a Chrome extension that automatically monitors all open tabs every 10 seconds and reloads any tab that contains a "504" error in its content. This helps ensure that tabs encountering server errors are promptly reloaded, maintaining your browsing experience.
+Tab 504 Checker is a Chrome extension that automatically monitors all open tabs every 30 seconds and reloads any tab that contains a "504" error in its content. This helps ensure that tabs encountering server errors are promptly reloaded, maintaining your browsing experience.
 
 ## Installation
 
@@ -24,7 +24,7 @@ Tab 504 Checker is a Chrome extension that automatically monitors all open tabs 
 
 ## Usage
 
-Once the extension is installed, it will automatically start monitoring your open tabs. You don't need to take any further action. The extension will check each tab every 10 seconds, and if a tab contains a "504" error in its content, it will automatically reload the tab.
+Once the extension is installed, it will automatically start monitoring your open tabs. You don't need to take any further action. The extension will check each tab every 30 seconds, and if a tab contains a "504" error in its content, it will automatically reload the tab.
 
 ## Turning Off the Extension
 
@@ -47,13 +47,13 @@ If you want to turn off the Tab 504 Checker extension, follow these steps:
 To change the interval at which the extension checks for "504" errors:
 
 1. Open the `background.js` file in a text editor.
-2. Locate the line with the `setInterval` function:
+2. Locate the line with the `chrome.alarms.create` function:
 
-   setInterval(checkTabs, 10000);
+   chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 0.5 });
 
-3. Change `10000` (10,000 milliseconds) to your desired interval in milliseconds. For example, to check every 5 seconds, change it to:
+3. Change `0.5` (0.5 minutes) to your desired interval in minutes. For example, to check every 1 minute, change it to:
 
-   setInterval(checkTabs, 5000);
+   chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 1 });
 
 4. Save the changes and reload the extension in Chrome:
 
