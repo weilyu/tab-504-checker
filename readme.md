@@ -51,7 +51,7 @@ To change the interval at which the extension checks for "504" errors:
 
    chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 0.5 });
 
-3. Change `0.5` (0.5 minutes) to your desired interval in minutes. For example, to check every 1 minute, change it to:
+3. Change `0.5` (0.5 minutes) to your desired interval in minutes. Please note that the minimum alarm interval supported by Chrome is currently 30 seconds. For example, to check every 1 minute, change it to:
 
    chrome.alarms.create("checkTabsAlarm", { periodInMinutes: 1 });
 
